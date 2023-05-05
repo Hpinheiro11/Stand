@@ -1,4 +1,4 @@
-package pt.ipg.pt
+package pt.ipg.stand
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
