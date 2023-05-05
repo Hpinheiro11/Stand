@@ -5,7 +5,7 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import java.lang.ArithmeticException
 
-class TabelaBD (val db: SQLiteDatabase, val venda: String) {
+abstract class TabelaBD (val db: SQLiteDatabase, val venda: String) {
     abstract fun cria()
 
     fun insere( valores: ContentValues) {
@@ -28,6 +28,7 @@ class TabelaBD (val db: SQLiteDatabase, val venda: String) {
     fun elimina(where: String, argsWhere: Array<String>) =
         db.delete(venda, where, argsWhere)
 
-
-
+    companion object {
+        const val CHAVE_TABELA = "${ BaseColumns._ID} INTEGER PRIMARY KEY AUTOINCREMENT, descricao TEXT NOT NULL UNIQUE"
+    }
 }
