@@ -8,8 +8,9 @@ class TabelaVenda(db: SQLiteDatabase) : TabelaBD(db,"vendas" ) {
     override fun cria() {
         db.execSQL("CREATE TABLE  $NOME_TABELA ($CHAVE_TABELA,descricao TEXT NOT NULL)")
     }
-    companion object
-        const val  NOME_TABELA = "vendas"
+    companion object {
+        const val NOME_TABELA = "vendas"
+    }
     }
 
 
