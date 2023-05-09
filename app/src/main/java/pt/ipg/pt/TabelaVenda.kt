@@ -1,16 +1,15 @@
 package pt.ipg.stand
 
 import android.database.sqlite.SQLiteDatabase
+import android.provider.BaseColumns
 
 
-private const val NOME_TABELA = "categoria"
-
-
-class TabelaVenda(db: SQLiteDatabase, venda: String) : TabelaBD(db,"categoria" ) {
+class TabelaVenda(db: SQLiteDatabase) : TabelaBD(db,"vendas" ) {
     override fun cria() {
-        db.execSQL("CREATE TABLE  $NOME_TABLE (${BaseColumns._ID}, $CHAVE_TABELA,descricao TEXT NOT NULL)")
+        db.execSQL("CREATE TABLE  $NOME_TABELA ($CHAVE_TABELA,descricao TEXT NOT NULL)")
     }
-
+    companion object
+        const val  NOME_TABELA = "vendas"
     }
 
 
