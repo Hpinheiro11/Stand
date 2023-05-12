@@ -47,6 +47,8 @@ class BdInstrumentedTest {
         val bd = openHelper.writableDatabase
 
         val venda = Venda("Drama")
+        val id = TabelaVenda(bd).insere(venda.toContentValue())
+        assertNotEquals(-1,id)
 
         //TabelaVenda(bd).insere()
     }
