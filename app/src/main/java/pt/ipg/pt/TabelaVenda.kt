@@ -6,10 +6,11 @@ import android.provider.BaseColumns
 
 class TabelaVenda(db: SQLiteDatabase) : TabelaBD(db,"vendas" ) {
     override fun cria() {
-        db.execSQL("CREATE TABLE  $NOME_TABELA ($CHAVE_TABELA,descricao TEXT NOT NULL)")
+        db.execSQL("CREATE TABLE  $NOME_TABELA ($CHAVE_TABELA,$CAMPO_DESCRICAO TEXT NOT NULL)")
     }
     companion object {
         const val NOME_TABELA = "vendas"
+        const val CAMPO_DESCRICAO = "descricao"
     }
     }
 

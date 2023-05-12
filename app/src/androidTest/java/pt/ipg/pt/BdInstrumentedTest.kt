@@ -41,5 +41,13 @@ class BdInstrumentedTest {
         assertEquals("pt.ipg.stand", appContext.packageName)
     }
 
+    fun consegueInserirVenda(){
+        val openHelper = BDStandOpenHelper(getAppContext())
+        val bd = openHelper.writetableDatabase
+
+        val venda = Venda("Drama")
+
+        //TabelaVenda(bd).insere()
+    }
 
 }
