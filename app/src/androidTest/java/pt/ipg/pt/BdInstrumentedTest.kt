@@ -9,6 +9,7 @@ import org.junit.runner.RunWith
 
 import org.junit.Assert.*
 import org.junit.Before
+import pt.ipg.pt.Venda
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -43,7 +44,7 @@ class BdInstrumentedTest {
 
     fun consegueInserirVenda(){
         val openHelper = BDStandOpenHelper(getAppContext())
-        val bd = openHelper.writetableDatabase
+        val bd = openHelper.writableDatabase
 
         val venda = Venda("Drama")
 
